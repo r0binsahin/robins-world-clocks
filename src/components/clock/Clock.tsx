@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
-import { ClockType } from '../models/Clock';
+import { ClockType } from '../../models/Clock';
+import styles from './clock.module.scss';
 
 interface ClockProps {
   clock: ClockType;
@@ -10,22 +11,18 @@ export const Clock = ({ clock }: ClockProps) => {
     timeZone: clock.timezone,
   });
 
-  console.log(initialTime);
-
   const [time, setTime] = useState(initialTime);
 
   useEffect(() => {
     setInterval(() => {
-      setTime(new Date().toLocaleString('en-US', { timeZone: clock.timezone }));
+      setTime(new Date().toLocaleString('sv', { timeZone: clock.timezone }));
     }, 1000);
-
-    /*     return () => clearInterval(timer); */
-  }, [clock.timezone]);
+  }, []);
 
   return (
-    <div>
-      <h3>{clock.location}</h3>
-      <p>{time}</p>
+    <div className={styles.clockContainer}>
+      <h3 className={styles.title}>{clock.location}</h3>
+      <p className={styles.time}>{time}</p>
     </div>
   );
 };
