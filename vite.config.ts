@@ -6,4 +6,7 @@ export default defineConfig({
   plugins: [react()],
 
   base: '/robins-world-clocks/',
+  build: {
+    target: 'esnext',
+  },
 });
