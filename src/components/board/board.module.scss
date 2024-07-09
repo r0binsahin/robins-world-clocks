@@ -4,8 +4,14 @@
   display: flex;
   flex-direction: column;
 
-  justify-content: center;
-  align-items: center;
-
   gap: 30px;
+
+  color: #000;
+
+  .inputWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
