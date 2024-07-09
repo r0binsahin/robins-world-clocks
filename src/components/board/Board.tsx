@@ -1,6 +1,6 @@
 import { ClockType } from '../../models/Clock';
 
-import styles from './board.module.scss';
+import './board.scss';
 import { Clock } from '../clock/Clock';
 
 interface BoardProps {
@@ -9,7 +9,7 @@ interface BoardProps {
 
 export const Board = ({ clocks }: BoardProps) => {
   return (
-    <div className={styles.board}>
+    <div className='board'>
       {clocks.map((clock, index) => (
         <Clock key={index} clock={clock} />
       ))}
