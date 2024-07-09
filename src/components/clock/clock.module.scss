@@ -1,13 +1,21 @@
 .clockContainer {
   width: 250px;
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
 
   border: 1px solid #000;
   border-radius: 8px;
-  color: #000;
 
   .title {
+    color: rgb(6, 6, 143);
+    font-size: 18px;
   }
 
   .time {
+    color: #a1058f;
+    font-size: 24px;
   }
 }
