@@ -7,7 +7,7 @@ interface ClockProps {
 }
 
 export const Clock = ({ clock }: ClockProps) => {
-  const initialTime = new Date().toLocaleString('sv', {
+  const initialTime = new Date().toLocaleTimeString('sv-SE', {
     timeZone: clock.timezone,
   });
 
@@ -15,7 +15,9 @@ export const Clock = ({ clock }: ClockProps) => {
 
   useEffect(() => {
     setInterval(() => {
-      setTime(new Date().toLocaleString('sv', { timeZone: clock.timezone }));
+      setTime(
+        new Date().toLocaleTimeString('sv-SE', { timeZone: clock.timezone })
+      );
     }, 1000);
   }, []);
 
