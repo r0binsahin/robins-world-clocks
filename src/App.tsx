@@ -24,7 +24,7 @@ function App() {
     <div className='app-wrapper'>
       <h1 className='title'>World Clocks</h1>
       <Board clocks={clocks} />
-      <div>
+      <div className='input-box'>
         <input
           type='text'
           placeholder='City'
