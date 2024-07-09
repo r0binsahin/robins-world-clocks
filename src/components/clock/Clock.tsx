@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { ClockType } from '../../models/Clock';
-import styles from './clock.module.scss';
+import './clock.scss';
 
 interface ClockProps {
   clock: ClockType;
@@ -22,9 +22,9 @@ export const Clock = ({ clock }: ClockProps) => {
   }, []);
 
   return (
-    <div className={styles.clockContainer}>
-      <h3 className={styles.title}>{clock.location}</h3>
-      <p className={styles.time}>{time}</p>
+    <div className='clock-container'>
+      <h3 className='title'>{clock.location}</h3>
+      <p className='time'>{time}</p>
     </div>
   );
 };

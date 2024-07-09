@@ -1,6 +1,6 @@
 import { Board } from './components/board/Board';
 
-import styles from './app.module.scss';
+import './app.scss';
 import { useEffect, useState } from 'react';
 import { ClockType } from './models/Clock';
 
@@ -21,8 +21,8 @@ function App() {
     localStorage.setItem('clocks', JSON.stringify(clocks));
   }, [clocks]);
   return (
-    <div className={styles.appWrapper}>
-      <h1>World Clocks</h1>
+    <div className='app-wrapper'>
+      <h1 className='title'>World Clocks</h1>
       <Board clocks={clocks} />
       <div>
         <input
