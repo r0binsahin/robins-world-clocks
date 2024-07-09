@@ -35,7 +35,7 @@ function App() {
       <h1 className='title'>World Clocks</h1>
       <Board clocks={clocks} />
       <div className='input-box'>
-        <h1>Add more cities</h1>
+        <h1> 🌇 Add more cities 🏙️</h1>
         <input
           type='text'
           placeholder='city'
@@ -48,7 +48,7 @@ function App() {
           value={timezone}
           onChange={(e) => setTimezone(e.target.value)}
         />
-        <button onClick={addClock}>Add Clock</button>
+        <button onClick={addClock}>Submit</button>
       </div>
     </div>
   );

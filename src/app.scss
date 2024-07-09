@@ -47,5 +47,24 @@
         padding: 20px;
       }
     }
+
+    button {
+      width: 80px;
+      height: 40px;
+
+      border: 1px solid #000;
+      border-radius: 8px;
+
+      background-color: purple;
+      color: #fff;
+
+      font-weight: 700;
+
+      cursor: pointer;
+
+      &:hover {
+        opacity: 0.5;
+      }
+    }
   }
 }
