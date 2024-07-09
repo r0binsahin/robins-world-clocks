@@ -1,10 +1,15 @@
 import './App.css';
 import { Board } from './components/Board';
+import { ClockType } from './models/Clock';
 
 function App() {
+  const clocks: ClockType[] = [
+    { timezone: 'Europe/Stockholm', location: 'Stockholm' },
+    { timezone: 'Europe/London', location: 'London' },
+  ];
   return (
     <>
-      <Board />
+      <Board clocks={clocks} />
     </>
   );
 }

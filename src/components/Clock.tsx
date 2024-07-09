@@ -1,20 +1,30 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import { ClockType } from '../models/Clock';
 
 interface ClockProps {
-  location: string;
-  timezone: string;
+  clock: ClockType;
 }
 
-export const Clock = ({ location, timezone }: ClockProps) => {
-  const initialTime = new Date().toLocaleString('sv', { timeZone: timezone });
+export const Clock = ({ clock }: ClockProps) => {
+  const initialTime = new Date().toLocaleString('sv', {
+    timeZone: clock.timezone,
+  });
 
   console.log(initialTime);
 
   const [time, setTime] = useState(initialTime);
 
+  useEffect(() => {
+    setInterval(() => {
+      setTime(new Date().toLocaleString('en-US', { timeZone: clock.timezone }));
+    }, 1000);
+
+    /*     return () => clearInterval(timer); */
+  }, [clock.timezone]);
+
   return (
     <div>
-      <h3>{location}</h3>
+      <h3>{clock.location}</h3>
       <p>{time}</p>
     </div>
   );
